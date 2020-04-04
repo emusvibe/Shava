@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-class QuotesController extends Controller
+use App\Contacts;
+class ContactUsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class QuotesController extends Controller
      */
     public function index()
     {
-        //
+        return view('welcome');
     }
 
     /**
@@ -34,7 +34,14 @@ class QuotesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+     $contact = new Contacts();
+     $contact->name = request('name');
+     $contact->email = request('email');
+     $contact->phone = request('phone');
+     $contact->company = request('company');
+     $contact->message = request('message');
+     $contact->save();
+     echo "Contact Saved";
     }
 
     /**

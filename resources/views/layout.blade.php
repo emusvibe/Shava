@@ -77,7 +77,7 @@
                         </div>
                     </li> --}}
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#about">About</a>
+                        <a class="nav-link page-scroll" href="#about">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="#services">Service</a>
@@ -145,7 +145,8 @@
                             <h4 class="mb-0">Get a quote today</h4>
                             <p>Get response within 24 hours</p>
                         </div>
-                        <form action="#" method="post" class="sign-up-form">
+                    <form action="/quotes" method="POST" class="sign-up-form">
+                            @csrf
                             <div class="form-group input-group">
                                 <input type="text" name="name" class="form-control" placeholder="Enter your name" required>
                             </div>
@@ -543,7 +544,8 @@
                     </div>
                 </div>
                 <div class="col-md-7">
-                    <form action="#" method="POST" id="contactForm1" class="contact-us-form" novalidate="novalidate">
+                    <form action="/contact" method="POST" id="contactForm1" class="contact-us-form" novalidate="novalidate">
+                        @csrf
                         <h5>Reach us quickly</h5>
                         <div class="row">
                             <div class="col-sm-6 col-12">

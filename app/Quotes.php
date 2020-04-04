@@ -8,3 +8,4 @@ class Quotes extends Model
 {
     //
 }
+

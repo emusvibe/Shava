@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/quotes','QuotationsController@index');
+Route::post('/quotes','QuotationsController@store');
+Route::get('/contact','ContactUsController@index');
+Route::post('/contact','ContactUsController@store');
+
